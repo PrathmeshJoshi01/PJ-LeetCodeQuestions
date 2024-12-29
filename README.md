@@ -1,2 +1,3 @@
 # PJ-LeetCodeQuestions
-This repo is for the finding the best solution for the coding question of the LeetCode 
+
+this repo is to practice the LeetCode Questions for the logial understanding
