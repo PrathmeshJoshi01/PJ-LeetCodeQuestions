@@ -1,0 +1,12 @@
+remove the white spaces from the string
+
+String str = "j a v a l e  a r  n ";
+
+//this method will not work
+String trimmstr = str.trim();
+syso(trimmstr);
+
+
+// we will use the replaceAll
+String trimStr = str.replaceAll("//s","");
+syso(trimStr);

@@ -1,0 +1,9 @@
+remove the special character from the string
+
+
+String str = "@j#a$v%^s&*r!";
+
+1 approach	
+
+String plainStr = str.replaceAll("[^a-zA-Z0-9]","");
+syso(plainStr)

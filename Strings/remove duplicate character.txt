@@ -1,0 +1,60 @@
+remove the duplicate character from the string 
+
+String str = "Programming";
+
+1 approach
+
+StringBuilder str1 = new StringBuilder();
+str.chars().distinct().forEach(c->str.append((char)c));
+syso(str);
+
+2 approach
+
+StringBuilder str2 = new StringBuilder();
+for(int i=0;i<str.length();i++)
+{
+	char ch = str.charAt(i);
+	int idx = str.indexOf(ch,i+1);
+	if(idx == -1){
+	str2.append(ch);
+	}
+}
+syso(str2);
+
+
+3 approach
+
+StringBuilder str3 = new StringBuilder();
+for(int i=0;i<arr.length;i++)
+{
+	boolean repeated = false;
+	for(int j=i+1;j<arr.length;j++)
+	{
+		if(arr[i]==arr[j])
+		{
+			repeated = true;
+			break;
+		}
+	}
+	if(!repeated)
+	{
+		str3.append(arr[i]);
+	}
+}
+syso(str3);
+
+
+4 approach
+
+StringBuilder str4 = new StringBuilder();
+Set<Character> set = new LinkedHashSet();
+for(int i=0;i<str.length();i++)
+{
+	set.add(str.charAt(i));
+}
+for(Character c : set)
+{
+	str4.append(c);
+}
+syso(str4);
+
