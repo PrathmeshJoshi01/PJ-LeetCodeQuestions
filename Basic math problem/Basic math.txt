@@ -130,24 +130,6 @@ public static void main(String[] args){
 		}
 	}
 }
-import java.util.Scanner;
-class Main{
-public static void main(String[] args){
-		Scanner sc = new Scanner(System.in);
-		int gcd=0;
-		int smaller=0;
-		int number1 = sc.nextInt();
-		int number2 = sc.nextInt();
-		
-		
-		for(int i=1;i<Math.min(number1,number2);i++){
-		    if(number1%i==0 && number2%i==0){
-		        gcd = i;
-		    }
-		}
-		System.out.println(gcd);
-	}
-}
 
 GCD and hcf
 
@@ -169,4 +151,4 @@ public static void main(String[] args){
 		System.out.println(gcd);
 	}
 }
-d
+
