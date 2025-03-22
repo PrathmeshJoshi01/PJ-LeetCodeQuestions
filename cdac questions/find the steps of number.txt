@@ -1,0 +1,48 @@
+//find the steps 
+//if the number is divide by 5 then number=number/5
+//if the number is divide by 3 then number=number/3
+//if the number is divide by 2 then number=number/2
+//if the number is not divide by 2,3,5 then number=number-1
+
+//count the steps
+
+
+import java.util.Scanner;
+class Main {
+    
+    public static int countSteps(int number){
+        int steps=0;
+        while(number>0){
+            if(number%5==0){
+               number = number/5;
+               System.out.println(number);
+            }
+            else if(number%3==0){
+                number = number/3;
+                System.out.println(number);
+            }
+            else if(number%2==0){
+                number=number/2;
+                System.out.println(number);
+            }
+            else{
+                number=number-1;
+                System.out.println(number);
+            }
+            steps++;
+        }
+        return steps;
+    }
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+        
+        Scanner sc = new Scanner(System.in);
+        
+        int number = sc.nextInt();
+        
+        int totalSteps = countSteps(number);
+        
+        System.out.println("the number of steps are "+totalSteps);
+        sc.close();
+    }
+}
