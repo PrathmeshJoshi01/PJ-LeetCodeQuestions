@@ -1,0 +1,117 @@
+// return the most repeating character
+
+//brut force approach
+class Main {
+    
+    public static char Solution(String str){
+       
+        char mostRepeatatingChar = 'a';
+        int maxCount = 0;
+        
+        for(int i=0;i<str.length();i++){
+            int currentCount = 0;
+            for(int j=0;j<str.length();j++){
+                if(str.charAt(i) == str.charAt(j)){
+                    
+                    currentCount++;
+                }
+            }
+            if(currentCount > maxCount){
+                maxCount = currentCount;
+                mostRepeatatingChar = str.charAt(i);
+            }
+        }
+        return mostRepeatatingChar;
+    }
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+        
+        String str = "";
+        
+        char result = Solution(str);
+        
+        System.out.println(result);
+    }
+}
+
+===========================todos=============================================
+
+
+2. Array Count Approach (ASCII)
+```java
+public class Solution {
+    public char findMostRepeatingCharArray(String str) {
+        
+		int[] charCount = new int[256]; // ASCII characters
+        int maxCount = 0;
+        char mostRepeatedChar = ' ';
+        
+        for (int i = 0; i < str.length(); i++) {
+            charCount[str.charAt(i)]++;
+            if (charCount[str.charAt(i)] > maxCount) {
+                maxCount = charCount[str.charAt(i)];
+                mostRepeatedChar = str.charAt(i);
+            }
+        }
+        return mostRepeatedChar;
+    }
+}
+```
+
+3. Hash Map Approach
+```java
+import java.util.HashMap;
+
+public class Solution {
+    public char findMostRepeatingCharHashMap(String str) {
+        HashMap<Character, Integer> charMap = new HashMap<>();
+        int maxCount = 0;
+        char mostRepeatedChar = ' ';
+        
+        for (int i = 0; i < str.length(); i++) {
+            char currentChar = str.charAt(i);
+            charMap.put(currentChar, charMap.getOrDefault(currentChar, 0) + 1);
+            
+            if (charMap.get(currentChar) > maxCount) {
+                maxCount = charMap.get(currentChar);
+                mostRepeatedChar = currentChar;
+            }
+        }
+        return mostRepeatedChar;
+    }
+}
+```
+
+4. Most Optimized (Single Pass with Array for ASCII)
+```java
+public class Solution {
+    public char findMostRepeatingCharOptimized(String str) {
+        int[] charCount = new int[128]; // Basic ASCII
+        int maxCount = 0;
+        char mostRepeatedChar = ' ';
+        
+        for (int i = 0; i < str.length(); i++) {
+            char currentChar = str.charAt(i);
+            charCount[currentChar]++;
+            if (charCount[currentChar] > maxCount) {
+                maxCount = charCount[currentChar];
+                mostRepeatedChar = currentChar;
+            }
+        }
+        return mostRepeatedChar;
+    }
+}
+```
+
+Example Usage:
+```java
+public class Main {
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        String test = "aabbccddddd";
+        
+        // Test any of the methods
+        char result = solution.findMostRepeatingCharOptimized(test);
+        System.out.println("Most repeated character: " + result); // Output: 'd'
+    }
+}
