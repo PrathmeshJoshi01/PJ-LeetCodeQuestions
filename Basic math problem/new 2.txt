@@ -32,7 +32,6 @@ class Main{
 public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
 		
-		int count = 0;
 		int lastNumber = 0;
 		int reverseNumber = 0;
 		int number = sc.nextInt();
@@ -41,8 +40,6 @@ public static void main(String[] args){
 			lastNumber = number % 10;
 			
 			number = number / 10;
-			
-			count++;
 			
 			reverseNumber = (reverseNumber * 10) + lastNumber;
 		}
@@ -123,31 +120,14 @@ public static void main(String[] args){
 			}
 		}
 		if(count==2){
-			System.out.println("the number is prime numeber");
+			System.out.println("the number is prime number");
 		}
 		else{
-			System.out.println("the give number is not prime numebr");
+			System.out.println("the give number is not prime number");
 		}
 	}
 }
-import java.util.Scanner;
-class Main{
-public static void main(String[] args){
-		Scanner sc = new Scanner(System.in);
-		int gcd=0;
-		int smaller=0;
-		int number1 = sc.nextInt();
-		int number2 = sc.nextInt();
-		
-		
-		for(int i=1;i<Math.min(number1,number2);i++){
-		    if(number1%i==0 && number2%i==0){
-		        gcd = i;
-		    }
-		}
-		System.out.println(gcd);
-	}
-}
+
 
 GCD and hcf
 
