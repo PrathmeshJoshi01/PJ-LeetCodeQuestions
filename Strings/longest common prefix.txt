@@ -1,0 +1,42 @@
+longest common prefix
+
+
+optimal and simple approach
+
+public string longestCommonStig(String[] str)
+{
+
+if(str == null || str.length() == 0) return "";
+
+String prefix = str[0];
+
+for(int i=0li<str.length;i++){
+
+while(!str[i].startWith(prefix)){
+	
+	prefix = prefix.substring(0, perfix.length()-i);
+
+if(prefix.isEmpty()) return "";
+}
+}
+
+return prefix;
+}
+
+
+
+using trie
+
+
+public class TrieNode{
+Map<Character, TrieNode> children = new HashMap<>();
+Boolean isEnd = false; 
+
+}
+
+public class Solution{
+TrieNode root = new TrieNode();
+
+
+
+}

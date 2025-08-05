@@ -5,13 +5,13 @@ import java.util.Scanner;
 class Main {
     
     public static String lowestQuantity(String product) {
-        String[] items = product.split(";"); // Split products using ";"
-        String lowestProduct = "";
-        int minQuantity = Integer.MAX_VALUE;
-
-        for (String item : items) {
-            String name = item.replaceAll("\\d", "").trim(); // Extract product name
-            int quantity = Integer.parseInt(item.replaceAll("\\D", "").trim()); // Extract quantity
+        String[] items = product.split(";");                                              // Split products using ";"
+        String lowestProduct = "";                                                                      
+        int minQuantity = Integer.MAX_VALUE;                                                           
+                                                                                                      
+        for (String item : items) {                                                                  
+            String name = item.replaceAll("\\d", "").trim();                              // Extract product name
+            int quantity = Integer.parseInt(item.replaceAll("\\D", "").trim());           // Extract quantity
 
             if (quantity < minQuantity) {
                 minQuantity = quantity;
